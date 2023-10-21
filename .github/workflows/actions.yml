@@ -2,7 +2,7 @@ name: Execute github_actions_test
 
 on:
   schedule:
-    - cron: '22 20 * * *'  # Dieser Zeitplan führt das Skript jeden Tag um 18 Uhr aus
+    - cron: '00 21 * * *'  # Dieser Zeitplan führt das Skript jeden Tag um 18 Uhr aus
 
 jobs:
   build:
