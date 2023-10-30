@@ -1,26 +1,26 @@
-name: Execute github_actions_test
+# name: Execute github_actions_test
 
-on:
-  schedule:
-    - cron: '00 21 * * *'  # Dieser Zeitplan führt das Skript jeden Tag um 18 Uhr aus
+# on:
+#   schedule:
+#     - cron: '00 21 * * *'  # Dieser Zeitplan führt das Skript jeden Tag um 18 Uhr aus
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
+#       - name: Set up Python
+#         uses: actions/setup-python@v2
+#         with:
+#           python-version: 3.8
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install jupyter
-          pip install pandas
+#       - name: Install dependencies
+#         run: |
+#           python -m pip install --upgrade pip
+#           pip install jupyter
+#           pip install pandas
 
-      - name: Execute Notebook
-        run: jupyter nbconvert --to notebook --execute github_actions_test.ipynb
+#       - name: Execute Notebook
+#         run: jupyter nbconvert --to notebook --execute github_actions_test.ipynb
